@@ -16,29 +16,8 @@ const images = [
   },
 ];
 
-// const listEl = document.querySelector('#gallery');
-
-// const elements = images.map(image => {
-//   const itemEl = document.createElement('li');
-//   const imgEl = document.createElement('img');
-//   imgEl.src = image.url;
-//   imgEl.alt = image.alt;
-//   itemEl.append(imgEl);
-//   return itemEl;
-    
-// });
-
-// listEl.append(...elements);
-// console.log(listEl);
-
 const listEl = document.querySelector('#gallery');
 listEl.classList.add('imagesList');
-
-// // const elements = images.map(image => {
-// //   const itemEl = `<li class='list-item'>
-// // <img class=list-img, src=${image.url} alt = ${image.alt}> </img></li>`
-// //     return itemEl;
-// // }).join('');
 
 const elements = images.map(image => {
   return `<li class='list-item'>

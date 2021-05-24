@@ -31,7 +31,6 @@ const refs = {
 refs.input.addEventListener('input', onInputChange);
 
 function onInputChange(event) {
-    
     refs.span.textContent = event.target.value;
     console.log(event.target.value.trim());
 };

@@ -33,18 +33,15 @@ refs.btnDecrement.addEventListener('click', onBtnDecrement);
 refs.btnIncrement.addEventListener('click', onBtnIncrement);
 
 function onBtnDecrement() {
-    
     const v = Number.parseInt(refs.counterValue.textContent);
     refs.counterValue.textContent = v - 1 ;
     //console.log('minus ' + Date.now());
 };
 
 function onBtnIncrement() {
-    
     const v = Number.parseInt(refs.counterValue.textContent);
     refs.counterValue.textContent = v + 1 ;
-
-    console.log('plus ' + Date.now());
+    //console.log('plus ' + Date.now());
 };
 
 console.log(makeCounterContainer);
