@@ -12,7 +12,7 @@ makeInput.placeholder = "Ваше имя?";
 makeInput.id = "name-input";
 
 const makeH1 = document.createElement("h1");
-makeH1.textContent = 'Привет ';
+makeH1.textContent = 'Привет, ';
 
 makeH1.insertAdjacentHTML(
   'beforeend',
@@ -31,20 +31,12 @@ const refs = {
 refs.input.addEventListener('input', onInputChange);
 
 function onInputChange(event) {
-    refs.span.textContent = event.target.value;
-    console.log(event.target.value.trim());
+    if (event.target.value.trim() !== ""){
+        refs.span.textContent = event.target.value;
+    }
+    else {
+        refs.span.textContent = 'незнакомец';
+    }
+
 };
 
-
-//======== string.trim() пробіли 
-// function onInputValid(event) {
-//     const inputLength = Number.parseInt(input.dataset.length);
-//     const inputValueLength = event.target.value.length;
-
-//     if (inputLength === inputValueLength){        
-//         input.classList.add('valid');
-//     }
-//     else {
-//         input.classList.add('invalid');
-//     }
-// };

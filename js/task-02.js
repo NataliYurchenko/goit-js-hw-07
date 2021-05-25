@@ -9,27 +9,27 @@ const ingredients = [
 
  const ListBoxEl = document.querySelector('#ingredients');
 
-// const makeList = ingredients => {
-//   return ingredients.map((ingredient) => {
-//     const makeItemEl = document.createElement('li');
-//     makeItemEl.textContent = ingredient;
-//     return makeItemEl;
-//   });
-// };
+const makeList = ingredients => {
+  return ingredients.map((ingredient) => {
+    const makeItemEl = document.createElement('li');
+    makeItemEl.textContent = ingredient;
+    return makeItemEl;
+  });
+};
 
-// ListBoxEl.append(...makeList);
-// console.log(ListBoxEl);
+ListBoxEl.append(...makeList(ingredients));
+console.log(ListBoxEl);
 
 
  //==================  map==============
-const makeList = ingredients.map((ingredient) => {
-  const makeItemEl = document.createElement('li');
-  makeItemEl.textContent = ingredient;
-  return makeItemEl;
-});
+// const makeList = ingredients.map((ingredient) => {
+//   const makeItemEl = document.createElement('li');
+//   makeItemEl.textContent = ingredient;
+//   return makeItemEl;
+// });
 
-ListBoxEl.append(...makeList);
-console.log(ListBoxEl);
+// ListBoxEl.append(...makeList);
+// console.log(ListBoxEl);
 
 //===========const map============
 
