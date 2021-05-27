@@ -22,5 +22,5 @@ refs.input.addEventListener('input', onInputSlide);
 
 function onInputSlide(event) {
     const size = event.target.value;
-    document.body.style.fontSize = size + "px";
+    refs.span.style.fontSize = size + "px";
 };

@@ -19,6 +19,8 @@ makeButtonAdd.setAttribute("data-action", "increment");
 makeCounterContainer.append(makeButtonSubtract, makeCounterValue, makeButtonAdd);
 document.body.append(makeCounterContainer);
 
+let counter  = 0;
+
 
 const refs = {
     counterConteiner: document.querySelector('#counter'),
@@ -33,15 +35,13 @@ refs.btnDecrement.addEventListener('click', onBtnDecrement);
 refs.btnIncrement.addEventListener('click', onBtnIncrement);
 
 function onBtnDecrement() {
-    const v = Number.parseInt(refs.counterValue.textContent);
-    refs.counterValue.textContent = v - 1 ;
-    //console.log('minus ' + Date.now());
+    counter -= 1;
+    refs.counterValue.textContent = counter;
 };
 
 function onBtnIncrement() {
-    const v = Number.parseInt(refs.counterValue.textContent);
-    refs.counterValue.textContent = v + 1 ;
-    //console.log('plus ' + Date.now());
+    counter += 1;
+    refs.counterValue.textContent = counter;
 };
 
 console.log(makeCounterContainer);

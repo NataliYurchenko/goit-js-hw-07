@@ -42,10 +42,12 @@ function onInputValid(event) {
     const inputLength = Number.parseInt(input.dataset.length);
     const inputValueLength = event.target.value.length;
 
-    if (inputLength === inputValueLength){        
+    if (inputLength === inputValueLength) {
+        input.classList.remove('invalid');
         input.classList.add('valid');
     }
     else {
+        input.classList.remove('valid');
         input.classList.add('invalid');
     }
 };
